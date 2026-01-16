@@ -11,10 +11,8 @@ st.write(
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
-openai_api_key = "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"
-
  # Create an OpenAI client.
-client = OpenAI(api_key=openai_api_key)
+client = OpenAI(api_key=st.secrets["openai_api_key"])
 
 # Let the user upload a file via `st.file_uploader`.
 uploaded_file = st.file_uploader(
