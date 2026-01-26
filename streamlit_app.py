@@ -1,4 +1,4 @@
-import streamlist as st
+import streamlit as st
 st.title('IST 488 Labs')
 Lab1 = st.Page('labs/lab1.py', title = 'Lab 1', icon = '📝')
 Lab2 = st.Page('labs/lab2.py', title = 'Lab 2', icon = '📝')
