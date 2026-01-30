@@ -8,9 +8,19 @@ st.write(
     "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
 )
 
-# Ask user for their OpenAI API key via `st.text_input`.
-# Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
-# via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
+# Create summary type selection
+summary_type = st.sidebar.radio(
+    "Select summary type:",
+    options=[
+        "Summarize the document in 100 words",
+        "Summarize the document in 2 connecting paragraphs",
+        "Summarize the document in 5 bullet points"
+    ]
+)
+
+# Model selection
+use_advanced = st.sidebar.checkbox("Use advanced model")
+
  # Create an OpenAI client.
 client = OpenAI(api_key=st.secrets["openai_api_key"])
 
@@ -39,7 +49,7 @@ if uploaded_file and question:
 
     # Generate an answer using the OpenAI API.
     stream = client.chat.completions.create(
-        model="gpt-5-nano",
+        model="gpt-5-nano" if use_advanced else "gpt-5-mini",
         messages=messages,
         stream=True,
     )
