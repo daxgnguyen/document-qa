@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.page_config(page_title = 'IST 488 Labs',
+st.set_page_config(page_title = 'IST 488 Labs',
                   initial_sidebar_state = 'expanded')
 
 st.title('IST 488 Labs')
