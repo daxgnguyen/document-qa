@@ -1,2 +1,8 @@
 streamlit
+requests
+PyPDF2
 openai
+anthropic
+beautifulsoup4
+chromadb
+pysqlite3-binary
