@@ -60,6 +60,8 @@ def extract_text_from_pdf(pdf_path):
             text += page_text
     return text
 
+st.write(f"Collection count: {collection.count()}")
+
 def load_pdfs_to_collection(folder_path, collection):
     if collection.count() == 0:
         pdf_folder = Path(folder_path)
