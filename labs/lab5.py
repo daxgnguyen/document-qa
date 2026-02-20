@@ -33,7 +33,7 @@ weather_tool = {
     "type": "function",
     "function": {
         "name": "get_current_weather",
-        "description": "Get the current weather for a location",
+        "description": "Get the current weather for a city",
         "parameters": {
             "type": "object",
             "properties": {
@@ -56,7 +56,7 @@ st.write(
 )
 
 with st.sidebar:
-    city = st.text_input("Location:", value="Syracuse, NY")
+    city = st.text_input("location:", value="Syracuse")
     go = st.button("Get Weather")
 
 if go:
