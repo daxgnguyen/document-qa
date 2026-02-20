@@ -71,7 +71,7 @@ if go:
     if msg.tool_calls:
         tc = msg.tool_calls[0]
         args = json.loads(tc.function.arguments)
-        weather = get_current_weather(args['location'], st.secrets["weather_api_key"])
+        weather = get_current_weather(city, st.secrets["weather_api_key"])
         st.json(weather)
 
         r2 = client.chat.completions.create(
