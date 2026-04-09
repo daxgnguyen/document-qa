@@ -11,6 +11,6 @@ Lab4 = st.Page('labs/lab4.py', title = 'Lab 4', icon = '📝')
 Lab5 = st.Page('labs/lab5.py', title = 'Lab 5', icon = '📝')
 Lab6 = st.Page('labs/lab6.py', title = 'Lab 6', icon = '📝')
 Lab8 = st.Page('labs/lab8.py', title = 'Lab 8', icon = '📝')
-pg = st.navigation([Lab2, Lab1, Lab3, Lab4, Lab5, Lab6])
+pg = st.navigation([Lab2, Lab1, Lab3, Lab4, Lab5, Lab6, Lab8])
 
 pg.run()
